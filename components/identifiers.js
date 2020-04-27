@@ -13,6 +13,7 @@ export const LAYOUT = 'RTLayout';
 export const LINK = 'RTLink';
 export const LIST = 'RTList';
 export const MENU = 'RTMenu';
+export const MENU_ITEM = 'RTMenuItem';
 export const NAVIGATION = 'RTNavigation';
 export const OVERLAY = 'RTOverlay';
 export const PROGRESS_BAR = 'RTProgressBar';

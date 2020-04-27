@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
-import { MENU } from '../identifiers.js';
+import { MENU, MENU_ITEM } from '../identifiers.js';
 import { events, utils } from '../utils';
 import InjectMenuItem from './MenuItem.js';
 
@@ -17,6 +17,10 @@ const POSITION = {
 };
 
 const factory = (MenuItem) => {
+
+  function isMenuItemType (type) {
+    return type === MenuItem || (type && type.toolboxId === MENU_ITEM);
+  }
   class Menu extends Component {
     static propTypes = {
       active: PropTypes.bool,
@@ -187,7 +191,7 @@ const factory = (MenuItem) => {
     renderItems () {
       return React.Children.map(this.props.children, (item) => {
         if (!item) return item;
-        if (item.type === MenuItem) {
+        if (isMenuItemType(item.type)) {
           return React.cloneElement(item, {
             ripple: item.props.ripple || this.props.ripple,
             selected: typeof item.props.value !== 'undefined' && this.props.selectable && item.props.value === this.props.selected,
