@@ -1,5 +1,5 @@
 {
-  "name": "@bionikspoon/react-toolbox",
+  "name": "@ftrack/react-toolbox",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.io",
   "version": "3.0.1",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bionikspoon/react-toolbox.git"
+    "url": "git+https://github.com/lucaas/react-toolbox.git"
   },
   "bugs": {
     "email": "issues@react-toolbox.com",
@@ -97,9 +97,6 @@
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.13.0"
-  },
-  "engines": {
-    "yarn": "1.13.x"
   },
   "files": [
     "*"
